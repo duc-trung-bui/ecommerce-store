@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+:root {
+  --primary-color: rgba(0, 104, 200, 1);
+  --secondary-color: rgba(221, 40, 49, 1);
+  --black: #000;
+  --white: #fff;
+  --yellow: #ffc904;
+  --orange: #ffb056;
+
+  --transition-regular: 0.3s;
+  --transition-slow: 0.6s;
+
+  --Bricolage-font: "Bricolage Grotesque", sans-serif;
+  --Plus-Jakarta-font: "Plus Jakarta Sans", sans-serif;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+/* HERO */
+
+.bg-element {
+  position: relative;
+}
+
+.bg-element:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 200px;
+  background-color: #d1d5db;
+  filter: blur(250px);
+  z-index: -1;
+}
+
+.bg-element:before {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 200px;
+  background-color: #9ca3af;
+  filter: blur(250px);
+  z-index: -1;
+}
+
+.hero-bg {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+
+.hero-image {
+  width: 75%;
+  height: 100%;
+  margin-left: 24px;
+}
+
+/* Initial state (no flicker) */
+.hero-content h1,
+.hero-content h5,
+.hero-span,
+.hero-content button,
+.hero-image {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Animate only when .hero-ready class is present */
+.hero-ready .hero-content h1 {
+  animation: Anim-fade-bottom var(--transition-regular) 0.6s forwards linear;
+}
+
+.hero-ready .hero-content h5 {
+  animation: Anim-fade-bottom var(--transition-regular) 0.9s forwards linear;
+}
+
+.hero-ready .hero-span {
+  animation: Anim-fade-bottom var(--transition-regular) 1.1s forwards linear;
+}
+
+.hero-ready .hero-content button {
+  animation: Anim-fade-bottom var(--transition-regular) 1.2s forwards linear;
+}
+
+.hero-ready .hero-image {
+  animation: Anim-fade-bottom var(--transition-regular) 1.5s forwards linear;
+}
+
+/* Same animation keyframes */
+@keyframes Anim-fade-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HERO MQ Section */
+
+@media (max-width: 1399px) {
+  .hero-content h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .middle-nav {
+    flex-wrap: wrap;
+  }
+
+  .get-help {
+    width: 100%;
+    justify-content: start;
+  }
+
+  .nav-menu {
+    width: 60%;
+  }
+}
+
+@media (max-width: 991px) {
+  .middle-nav {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+  }
+
+  .product-search {
+    width: 100%;
+  }
+
+  .hide {
+    display: none !important;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hide {
+    display: none !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .hide {
+    display: none !important;
+  }
+
+  .product-search select {
+    width: 50%;
+  }
+
+  .nav-menu li a {
+    font-size: 1rem;
+  }
+
+  .top-nav {
+    flex-direction: column;
+  }
+
+  .top-nav {
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+  }
+
+  .top-nav ul {
+    width: 100%;
+    justify-content: start;
+  }
+
+  .top-nav ul {
+    margin-top: 20px;
+  }
+}
+
+/* BANNER */
+
+@media (max-width: 575px) {
+  .banner-1 {
+    background-size: 800%;
+    background-repeat: no-repeat;
+  }
+}
+
+
+/* TOP PRODUCTS */
+
+.top-product {
+  position: relative;
+}
+
+.top-product:after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 300px;
+  height: 2px;
+  background-color: var(--orange);
+}
+
+/* Footer Styles */
+footer {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Remove the old :after pseudo-element if you still have it */
+footer::after {
+  display: none;
+}
+
+/* PRODUCT MQ SECTION */
+
+@media (max-width:1199px) {
+  .product-banner-wrap {
+    height: 550px;
+  }
+
+  /* .product-wrap {
+    grid-template-columns: repeat(3, 1fr) !important;
+  } */
+}
+
+@media (max-width:991px) {
+  .product-banner-wrap {
+    height: 100%;
+  }
+}
+
+/* @media (max-width:767px) {
+  .product-wrap {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+} */
+
+/* Shop Page */
+
+@media (max-width:575px) {
+  .new-small-project {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+
+/* globals.css */
+.text-shadow-sm {
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+.text-shadow-md {
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+
+/* Custom Thin Scrollbar for the Cart Items */
+.cart-items-container::-webkit-scrollbar-track {
+  background: transparent; /* Makes the track invisible */
+}
+
+.cart-items-container::-webkit-scrollbar-thumb {
+  background: #d1d5db; /* gray-300 */
+  border-radius: 10px;
+}
+
+.cart-items-container::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af; /* gray-400 on hover */
+}
+
+/* Firefox support */
+.cart-items-container {
+  scrollbar-color: #f0f0f0 transparent;
+}
+
+/* Border animation */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes draw-border {
+  to { --angle: 360deg; }
+}
+
+@keyframes fade-out {
+  0% { opacity: 1; transform: scale(1); }
+  80% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+
+.animate-draw {
+  animation: draw-border 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* This targets the yellow tip specifically */
+.animate-glow-tip {
+  animation: 
+    draw-border 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+    fade-out 0.3s 2s forwards; /* Fades out right before it finishes */
+}

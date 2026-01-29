@@ -1,0 +1,140 @@
+{
+  "Products": [
+    {
+      "Id": 1,
+      "Name": "Audio System Multiroom 360 Degree",
+      "Category": "Speakers",
+      "Price": "629.00",
+      "OldPrice": "709.00",
+      "ProductsImage": "/products/Product-18.png"
+    },
+    {
+      "Id": 2,
+      "Name": "Tablet White EliteBook 2024",
+      "Category": "Tablets",
+      "Price": "299.00",
+      "OldPrice": "",
+      "ProductsImage": "/products/Product-19.png"
+    },
+    {
+      "Id": 3,
+      "Name": "Noise Cancelling Over-Ear Headphones",
+      "Category": "Accessories",
+      "Price": "799.00",
+      "OldPrice": "899.00",
+      "ProductsImage": "/products/Product-20.png"
+    },
+    {
+      "Id": 4,
+      "Name": "Smartphone LTE 128GB",
+      "Category": "Mobile Phones",
+      "Price": "129.00",
+      "OldPrice": "159.00",
+      "ProductsImage": "/products/Product-21.png"
+    },
+    {
+      "Id": 5,
+      "Name": "4K Action Camera Waterproof",
+      "Category": "Cameras",
+      "Price": "199.00",
+      "OldPrice": "",
+      "ProductsImage": "/products/Product-22.png"
+    },
+    {
+      "Id": 6,
+      "Name": "Printer Color LaserJet Pro M454dw",
+      "Category": "Accessories",
+      "Price": "699.00",
+      "OldPrice": "799.00",
+      "ProductsImage": "/products/Product-23.png"
+    },
+    {
+      "Id": 7,
+      "Name": "Game Console + Controller USB 3.0",
+      "Category": "Gaming",
+      "Price": "299.00",
+      "OldPrice": "419.00",
+      "ProductsImage": "/products/Product-31.png"
+    },
+    {
+      "Id": 8,
+      "Name": "Tablet iPad Air 2024 LTE",
+      "Category": "Tablets",
+      "Price": "349.00",
+      "OldPrice": "",
+      "ProductsImage": "/products/Product-25.png"
+    },
+    {
+      "Id": 9,
+      "Name": "Smartwatch Series 5",
+      "Category": "Wearables",
+      "Price": "249.00",
+      "OldPrice": "299.00",
+      "ProductsImage": "/products/Product-26.png"
+    },
+    {
+      "Id": 10,
+      "Name": "USB 3.0 Memory Stick 256 GB",
+      "Category": "Accessories",
+      "Price": "49.00",
+      "OldPrice": "69.00",
+      "ProductsImage": "/products/Product-27.png"
+    },
+    {
+      "Id": 11,
+      "Name": "Noise Cancelling Over-Ear Headphones",
+      "Category": "Headphones",
+      "Price": "399.00",
+      "OldPrice": "449.00",
+      "ProductsImage": "/products/Product-28.png"
+    },
+    {
+      "Id": 12,
+      "Name": "Smart Home Thermostat",
+      "Category": "Home Automation",
+      "Price": "199.00",
+      "OldPrice": "239.00",
+      "ProductsImage": "/products/Product-29.png"
+    },
+    {
+      "Id": 13,
+      "Name": "Electric Toothbrush",
+      "Category": "Health & Personal Care",
+      "Price": "79.00",
+      "OldPrice": "99.00",
+      "ProductsImage": "/products/Product-30.png"
+    },
+    {
+      "Id": 14,
+      "Name": "Tablet iPad 12 2025 Wifi",
+      "Category": "Tablets",
+      "Price": "599.00",
+      "OldPrice": "699.00",
+      "ProductsImage": "/products/Product-32.png"
+    },
+    {
+      "Id": 15,
+      "Name": "Laptop Stand Adjustable",
+      "Category": "Accessories",
+      "Price": "39.00",
+      "OldPrice": "49.00",
+      "ProductsImage": "/products/Product-33.png"
+    },
+    {
+      "Id": 16,
+      "Name": "Gaming Mouse RGB",
+      "Category": "Accessories",
+      "Price": "59.00",
+      "OldPrice": "79.00",
+      "ProductsImage": "/products/Product-34.png"
+    },
+    {
+      "Id": 17,
+      "Name": "4K Ultra HD Monitor 27 Inch",
+      "Category": "Monitors",
+      "Price": "429.00",
+      "OldPrice": "499.00",
+      "ProductsImage": "/products/Product-35.png"
+    }
+  ]
+}
