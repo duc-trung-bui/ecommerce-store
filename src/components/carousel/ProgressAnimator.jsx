@@ -109,9 +109,9 @@ function ProgressAnimator(props) {
     if (startDelayTimeoutId.current) clearTimeout(startDelayTimeoutId.current);
 
     if (!isPaused) {
+      // Mark initial mount as complete after first check
       if (isInitialMountRef.current) {
         isInitialMountRef.current = false;
-        return;
       }
 
       // Inject the penalty here only if it hasn't been applied and we are starting fresh
