@@ -45,7 +45,7 @@ const ProductCard = ({ product, onAddToCart, onClick }) => {
           <img
             src={product.ProductsImage}
             alt={product.Name}
-            className="max-w-full max-h-full transition-transform duration-300 group-hover:scale-105"
+            className="max-w-full max-h-full transition-transform duration-300 hover:scale-105"
             onClick={() => onClick(product.Id)}
           />
         </div>
