@@ -14,11 +14,13 @@ import Blog from "./components/pages/Blog";
 import FAQ from "./components/pages/FAQ";
 import Contact from "./components/pages/Contact";
 import BackToTop from "./components/additions/BackToTop";
+import ScrollToTop from "./components/functions/ScrollToTop";
 
 function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Nav />
         <BackToTop />
         <Routes>
