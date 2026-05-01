@@ -4,6 +4,7 @@ import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 
+import bgImageSlider from '../../assets/images/gettyimages-1224356307-640x640.jpg'
 import heroImg1 from '../../assets/images/hero.png';
 import heroImg2 from '../../assets/images/hero-2.png';
 import heroImg3 from '../../assets/images/hero-3.png';
@@ -166,7 +167,7 @@ function Index() {
         <div
           className="absolute inset-0 z-0 opacity-20 pointer-events-none"
           style={{
-            backgroundImage: `url('https://media.gettyimages.com/id/1224356307/video/circuit-board-background-copy-space-blue-loopable-animation-computer-data-technology.jpg?s=640x640&k=20&c=6Fjnz0VAJ1-Qj7mK1pBj6rEs0NQZlhL6PBoFcmgwhEA=')`,
+            backgroundImage: `url(${bgImageSlider})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             filter: 'grayscale(100%) contrast(1.05)',
