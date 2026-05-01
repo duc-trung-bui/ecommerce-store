@@ -254,7 +254,7 @@ function ProductDetails() {
                       <div
                         onClick={() => setActiveImage(img)}
                         className={`relative h-14 md:h-16 rounded-lg overflow-hidden cursor-pointer border-2 transition-all duration-300 ${activeImage === img ? "border-orange-500 scale-95 shadow-sm" : "border-transparent hover:border-gray-200"
-                          }`}
+                        }`}
                       >
                         <img
                           src={img}
@@ -346,7 +346,7 @@ function ProductDetails() {
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`pb-4 text-sm md:text-lg font-semibold capitalize transition-all duration-300 relative ${activeTab === tab ? "text-orange-500" : "text-gray-500 hover:text-gray-800"
-                  }`}
+                }`}
               >
                 {tab}
                 {activeTab === tab && (
