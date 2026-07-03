@@ -30,15 +30,11 @@ A modern and responsive electronics e-commerce web application built with **Reac
 
 ## 📸 Screenshots
 
-> Add screenshots of the homepage, product page, shopping cart, and mobile view here.
+> Screenshots of the homepage, product page, shopping cart, and mobile view here.
 
-Example:
+<img width="2104" height="1384" alt="ecommerce 2" src="https://github.com/user-attachments/assets/14f22a95-939b-44c1-88ac-eb7d2069eb2d" />
 
-```text
-/docs/homepage.png
-/docs/product-page.png
-/docs/cart.png
-```
+<img width="2031" height="1362" alt="ecommerce" src="https://github.com/user-attachments/assets/e3c14772-220c-41c8-8a7b-6e6016574cd3" />
 
 ---
 
