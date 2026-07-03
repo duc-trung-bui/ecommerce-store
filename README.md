@@ -96,11 +96,6 @@ src/
 │
 ├── assets/
 ├── components/
-├── pages/
-├── hooks/
-├── context/
-├── services/
-├── utils/
 ├── App.jsx
 └── main.jsx
 ```
