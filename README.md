@@ -27,6 +27,9 @@ A modern and responsive electronics e-commerce web application built with **Reac
 * **JavaScript (ES6+)**
 * **React Router**
 * **Context API / State Management**
+* **GSAP**
+* **Framer Motion**
+* **Embla Carousel**
 
 ## 📸 Screenshots
 
