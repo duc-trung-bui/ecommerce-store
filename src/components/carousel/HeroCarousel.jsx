@@ -22,7 +22,7 @@ export default function HeroCarousel({ slides }) {
   }, []);
 
 
-  /* ---------------- Autoplay Reset on Index Change (THE FIX) ---------------- */
+  /* ---------------- Autoplay Reset on Index Change ---------------- */
   useEffect(() => {
     // If the index changes, we assume the user wants the carousel to resume autoplay
     // on the new slide, clearing any previous pause state.
@@ -121,8 +121,6 @@ export default function HeroCarousel({ slides }) {
         isPaused={isPaused}
         onSelect={(newIndex) => {
 
-          // 🛑 CRITICAL FIX: Toggle Pause Logic
-
           // 1. Determine if the click is on the current slide or a new slide.
           const isClickOnCurrentSlide = newIndex === selectedIndex;
 
@@ -131,7 +129,6 @@ export default function HeroCarousel({ slides }) {
 
             // If the user clicked the current bar, or clicked a new bar, we TOGGLE the state.
             // The action of clicking ANY progress bar on mobile is the pause/play control.
-            // 🛑 FIX: Remove setTimeout, make the toggle synchronous.
             setIsPaused((prev) => !prev);
 
             // If the user clicks a non-current slide, we MUST scroll to it immediately.
@@ -144,11 +141,9 @@ export default function HeroCarousel({ slides }) {
 
           } else {
             // 3. Desktop Behavior: Always scroll, never toggle pause here.
-            // 🛑 FIX: Ensure the new index is set synchronously FIRST.
             // This causes an immediate re-render where the old slide is marked 'isPast' (100%).
             setSelectedIndex(newIndex);
 
-            // 🛑 FIX: Then, use a small delay before scrolling to let React update the DOM.
             // This prevents the scroll action from destroying the old component before it renders 100%.
             setTimeout(() => {
               emblaApi?.scrollTo(newIndex);

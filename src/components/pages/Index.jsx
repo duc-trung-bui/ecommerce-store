@@ -5,9 +5,12 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 
 import bgImageSlider from '../../assets/images/gettyimages-1224356307-640x640.jpg'
-import heroImg1 from '../../assets/images/hero.png';
+import heroImg1 from '../../assets/images/hero-7.png';
 import heroImg2 from '../../assets/images/hero-2.png';
 import heroImg3 from '../../assets/images/hero-3.png';
+import heroImg4 from '../../assets/images/hero-4.png';
+import heroImg5 from '../../assets/images/hero-5.png';
+import heroImg6 from '../../assets/images/hero-6.png';
 
 import banner1 from '../../assets/images/banner-1.jpg';
 import banner2 from '../../assets/images/banner-2.jpg';
@@ -50,22 +53,22 @@ const heroSlides = [
     subtitle: "Buy now with 25% discount for the first order"
   },
   {
-    image: heroImg2,
+    image: heroImg5,
     title: "Merry Christmas Promotion",
     subtitle: "Buy products from Sony to receive free shipping"
   },
   {
-    image: heroImg3,
+    image: heroImg4,
     title: "Buy everything with installments",
     subtitle: "Receive one installment off when you chose pay in installments"
   },
   {
-    image: heroImg1,
+    image: heroImg6,
     title: "New products from the best producers",
     subtitle: "Find the quality products from the bests"
   },
   {
-    image: heroImg2,
+    image: heroImg3,
     title: "Pay later if you can",
     subtitle: "Pay 30 days later with partnering services"
   },
@@ -180,7 +183,7 @@ function Index() {
       {/* Banners */}
       <div className="px-[8%] lg:px-[12%] py-10">
         {/* First Banner */}
-        <div className="relative banner-1 flex flex-col md:flex-row md:items-center justify-start rounded-xl p-6 md:p-16 min-h-[400px] md:min-h-[250px] md:h-[350px] bg-[rgb(237,243,237)] overflow-hidden mt-12">
+        <div className="relative banner-1 flex flex-col md:flex-row md:items-center justify-start rounded-xl p-6 md:p-16 min-h-[400px] md:min-h-[250px] md:h-[350px] bg-[rgb(239,255,237)] overflow-hidden mt-12">
 
           {/* CONTENT BLOCK - Appears First */}
           <div className="relative z-10 flex flex-col gap-2 md:gap-4 max-w-full md:max-w-[60%] lg:max-w-[50%]">
