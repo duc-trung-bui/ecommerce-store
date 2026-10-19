@@ -74,6 +74,9 @@ function ProductDetails() {
     // Check if we are on desktop before calculating coordinates
     if (window.innerWidth < 768) return;
 
+    // Mouse may already be over the image after navigation, so mouseenter never fires
+    setShowZoom(true);
+
     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
 
     // 1. Calculate raw percentages based on mouse position
