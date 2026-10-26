@@ -136,23 +136,24 @@ function ProductDetails() {
   };
 
   // Updated handler within ProductDetails
-  const handleAddToCart = () => {
-    const existingItem = cartItems.find((item) => item.Id === product.Id);
-
-    let updatedCart;
-    if (!existingItem) {
-      updatedCart = [...cartItems, { ...product, quantity: 1 }];
-    } else {
-      updatedCart = cartItems.map(item =>
-        item.Id === product.Id ? { ...item, quantity: item.quantity + 1 } : item
-      );
-    }
+  const addProductsToCart = (products) => {
+    let updatedCart = [...cartItems];
+    products.forEach((p) => {
+      const exists = updatedCart.some((item) => item.Id === p.Id);
+      updatedCart = exists
+        ? updatedCart.map((item) =>
+            item.Id === p.Id ? { ...item, quantity: item.quantity + 1 } : item
+          )
+        : [...updatedCart, { ...p, quantity: 1 }];
+    });
 
     setCartItems(updatedCart);
     localStorage.setItem("cartItems", JSON.stringify(updatedCart));
     setLastAddedAt(Date.now());
     setIsDrawerOpen(true);
   };
+
+  const handleAddToCart = () => addProductsToCart([product]);
 
   // Update and Remove helpers
   const onUpdateQuantity = (id, delta) => {
@@ -709,7 +710,10 @@ function ProductDetails() {
 
                       <div className="flex items-center justify-between pt-2">
                         <span className="text-lg font-black text-orange-500 tracking-tight">${item.Price}</span>
-                        <button className="h-10 w-10 flex items-center justify-center bg-orange-500 text-white rounded-full hover:bg-red-500 transition-all duration-300 shadow-sm">
+                        <button
+                          onClick={() => addProductsToCart([item])}
+                          aria-label={`Add ${item.Name} to cart`}
+                          className="h-10 w-10 flex items-center justify-center bg-orange-500 text-white rounded-full hover:bg-red-500 transition-all duration-300 shadow-sm">
                           <CartIcon size={18} />
                         </button>
                       </div>
@@ -734,7 +738,9 @@ function ProductDetails() {
                   <p className="text-sm text-gray-500 max-w-md">Add these curated essentials to your cart now and unlock an exclusive <span className="text-orange-600 font-bold">10% bundle discount</span>.</p>
                 </div>
 
-                <button className="w-full md:w-auto bg-orange-500 text-white px-10 py-4 rounded-2xl font-bold hover:bg-red-500 transition-all duration-300">
+                <button
+                  onClick={() => addProductsToCart(relatedProducts)}
+                  className="w-full md:w-auto bg-orange-500 text-white px-10 py-4 rounded-2xl font-bold hover:bg-red-500 transition-all duration-300">
                   ADD BUNDLE TO CART
                 </button>
               </div>
