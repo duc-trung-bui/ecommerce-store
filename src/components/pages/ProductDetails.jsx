@@ -56,20 +56,6 @@ function ProductDetails() {
     "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-air-storage-select-202405-13inch-starlight-wifi_FMT_WHH?wid=1280&hei=720&fmt=p-jpg&qlt=80&.v=TENLTVRoeFdHUUI5ZE1ZZmxpQUlNMm5pQUoxb0NIVEJFSjRVRzZ4dzV5VG9xblRoSytlREYxb2tmSnZTRlIvWmxzVWxuaTA3UGxIdzhKNUtuSEF5VlVtYW1kMXNQLzdDd2NuUVFzTDNlZmEyTE1mSHgwMHh1SlVoUDJNTksyTUZnWG04VnYwV0NCYVhKcVlFN0RlblJR&traceId=1", // 5. NEW IMAGE
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.3 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-  };
-
   const handleMouseMove = (e) => {
     // Check if we are on desktop before calculating coordinates
     if (window.innerWidth < 768) return;
@@ -468,7 +454,7 @@ function ProductDetails() {
                   <div
                     key={idx}
                     className={`flex py-4 px-4 rounded-lg ${idx % 2 === 1 ? "bg-gray-50" : ""
-                      }`}
+                    }`}
                   >
                     <span className="w-1/3 font-bold text-gray-900">{key}</span>
                     <span className="w-2/3 text-gray-600">{value}</span>
